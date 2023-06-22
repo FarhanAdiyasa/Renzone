@@ -443,6 +443,8 @@ namespace Renzone
 
         private void CRUDGame_Kary_Load_1(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'renzonDataSet1.vw_game' table. You can move, or remove it, as needed.
+            this.vw_gameTableAdapter.Fill(this.renzonDataSet1.vw_game);
 
         }
 
