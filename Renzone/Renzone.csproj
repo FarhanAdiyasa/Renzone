@@ -34,7 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\Semester 2\prjd\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\..\..\RenZone_Transaksi\RenZone_Transaksi\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\RenZone_Transaksi\RenZone_Transaksi\bin\Debug\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
@@ -55,6 +58,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCategory.designer.cs">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChoosePackage_Play.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoosePackage_Play.Designer.cs">
+      <DependentUpon>ChoosePackage_Play.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChoosePs_Play.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChoosePs_Play.Designer.cs">
+      <DependentUpon>ChoosePs_Play.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDGame_Kary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRUDGame_Kary.Designer.cs">
+      <DependentUpon>CRUDGame_Kary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +90,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddCategory.resx">
+      <DependentUpon>AddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoosePackage_Play.resx">
+      <DependentUpon>ChoosePackage_Play.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChoosePs_Play.resx">
+      <DependentUpon>ChoosePs_Play.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUDGame_Kary.resx">
+      <DependentUpon>CRUDGame_Kary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +113,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -88,6 +128,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\accessories.png" />
+    <Content Include="Resources\borrowing.png" />
+    <Content Include="Resources\CRUD %281%29.png" />
+    <Content Include="Resources\CRUD.png" />
+    <Content Include="Resources\desk.png" />
+    <Content Include="Resources\dining room table_.png" />
+    <Content Include="Resources\discount tag bold_.png" />
+    <Content Include="Resources\download.png" />
+    <Content Include="Resources\Edit Profile %283%29.png" />
+    <Content Include="Resources\game plan_.png" />
+    <Content Include="Resources\Group 16 %281%29.png" />
+    <Content Include="Resources\Group 16.png" />
+    <Content Include="Resources\headphone music_.png" />
+    <Content Include="Resources\home simple door_.png" />
+    <Content Include="Resources\hometable.png" />
+    <Content Include="Resources\icons8-add-bookmark-48.png" />
+    <Content Include="Resources\icons8-delete-30.png" />
+    <Content Include="Resources\icons8-delete-90.png" />
+    <Content Include="Resources\icons8-plus-30.png" />
+    <Content Include="Resources\icons8-rubik%27s-cube-30.png" />
+    <Content Include="Resources\icons8-save-as-30.png" />
+    <Content Include="Resources\icons8-save-as-301.png" />
+    <Content Include="Resources\icons8-save-as-90.png" />
+    <Content Include="Resources\icons8-x-96.png" />
+    <Content Include="Resources\name.png" />
+    <Content Include="Resources\Pembayaran %281%29.png" />
+    <Content Include="Resources\Pembayaran %283%29.png" />
+    <Content Include="Resources\pencil %282%29.png" />
+    <Content Include="Resources\pencil message_.png" />
+    <Content Include="Resources\pencil.png" />
+    <Content Include="Resources\pencilK.png" />
+    <Content Include="Resources\Pilih Paket.png" />
+    <Content Include="Resources\Pilih PS %281%29.png" />
+    <Content Include="Resources\Pilih PS %282%29.png" />
+    <Content Include="Resources\Pilih PS %283%29.png" />
+    <Content Include="Resources\Pilih PS %284%29.png" />
+    <Content Include="Resources\Pilih PS.png" />
+    <Content Include="Resources\play.png" />
+    <Content Include="Resources\playhere.png" />
+    <Content Include="Resources\playy.png" />
+    <Content Include="Resources\plusimage.png" />
+    <Content Include="Resources\PS.png" />
+    <Content Include="Resources\Tambahkan judul %2819%29 1.png" />
+    <Content Include="Resources\Tambahkan judul %2823%29.png" />
+    <Content Include="Resources\Tambahkan judul %2824%29.png" />
+    <Content Include="Resources\Tambahkan judul %285%29 6.png" />
+    <Content Include="Resources\Transaksi Member %281%29.png" />
+    <Content Include="Resources\Transaksi Member.png" />
+    <Content Include="Resources\Transaksi Utama %2811%29.png" />
+    <Content Include="Resources\Transaksi Utama %2812%29.png" />
+    <Content Include="Resources\Transaksi Utama %2812%291.png" />
+    <Content Include="Resources\Transaksi Utama %2813%29.png" />
+    <Content Include="Resources\Transaksi Utama %2814%29.png" />
+    <Content Include="Resources\Transaksi Utama %2815%29.png" />
+    <Content Include="Resources\trash.png" />
+    <Content Include="Resources\trashK.png" />
+    <Content Include="Resources\type.png" />
+    <Content Include="Resources\typee.png" />
+    <Content Include="Resources\Vector %281%29.png" />
+    <Content Include="Resources\Vector %282%29.png" />
+    <Content Include="Resources\Vector %282%291.png" />
+    <Content Include="Resources\Vector %284%29.png" />
+    <Content Include="Resources\Vector-1.png" />
+    <Content Include="Resources\Vector.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
