@@ -35,7 +35,7 @@ namespace Renzone
             dgvGame.DataSource = bindingSource;
 
             // Mengisi data dari dataset ke BindingSource
-            bindingSource.DataSource = renzonDataSet4.vw_game;
+            bindingSource.DataSource = renzonDataSet1.vw_game;
 
             LoadData();
 
