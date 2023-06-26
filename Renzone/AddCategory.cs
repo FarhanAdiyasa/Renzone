@@ -1,4 +1,5 @@
 ﻿using Guna.UI.WinForms;
+using Renzone;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,6 +89,11 @@ namespace RenZone_Transaksi
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

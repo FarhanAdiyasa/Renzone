@@ -25,8 +25,8 @@ namespace Renzone
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            Dashboard_Trans dashboard_Trans = new Dashboard_Trans();
-            dashboard_Trans.ShowDialog();
+            /*Dashboard_Trans dashboard_Trans = new Dashboard_Trans();
+            dashboard_Trans.ShowDialog();*/
         }
     }
 }

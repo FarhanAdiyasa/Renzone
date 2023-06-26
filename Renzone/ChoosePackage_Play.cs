@@ -19,14 +19,14 @@ namespace Renzone
 
         private void btnPrev_Click(object sender, EventArgs e)
         {
-            ChoosePS_Play choosePS_Play = new ChoosePS_Play();
+            ChoosePs_Play choosePS_Play = new ChoosePs_Play();
             choosePS_Play.ShowDialog();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            Payment_Play payment_Play = new Payment_Play();
-            payment_Play.ShowDialog();
+           /* Payment_Play payment_Play = new Payment_Play();
+            payment_Play.ShowDialog();*/
         }
     }
 }
