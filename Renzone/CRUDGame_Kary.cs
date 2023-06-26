@@ -29,20 +29,7 @@ namespace Renzone
 
         private void CRUDGame_Kary_Load(object sender, EventArgs e)
         {
-            tbIDG.Text = GenerateID();
-
-            // Menghubungkan DataGridView dengan BindingSource
-            dgvGame.DataSource = bindingSource;
-
-            // Mengisi data dari dataset ke BindingSource
-            bindingSource.DataSource = renzonDataSet1.vw_game;
-
-            LoadData();
-
-            dt = new DataTable();
-            adapter = new SqlDataAdapter("SELECT * FROM vw_game", connectionString);
-            adapter.Fill(dt);
-            dgvGame.DataSource = dt;
+            
         }
         private string GenerateID()
         {
@@ -443,8 +430,9 @@ namespace Renzone
 
         private void CRUDGame_Kary_Load_1(object sender, EventArgs e)
         {
-            /*// TODO: This line of code loads data into the 'renzonDataSet1.vw_game' table. You can move, or remove it, as needed.
-            this.vw_gameTableAdapter.Fill(this.renzonDataSet1.vw_game);*/
+            // TODO: This line of code loads data into the 'renzonDataSet11.vw_game' table. You can move, or remove it, as needed.
+            this.vw_gameTableAdapter.Fill(this.renzonDataSet11.vw_game);
+            tbIDG.Text = GenerateID();
 
         }
 

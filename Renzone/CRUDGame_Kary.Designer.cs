@@ -48,6 +48,8 @@
             this.btnCancel = new Guna.UI.WinForms.GunaButton();
             this.btSave = new Guna.UI.WinForms.GunaButton();
             this.dgvGame = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.vwgameBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.renzonDataSet1 = new Renzone.RenzonDataSet1();
             this.btnAddCat = new Guna.UI.WinForms.GunaImageButton();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.btnMenuAcc = new Guna.UI.WinForms.GunaButton();
@@ -64,15 +66,15 @@
             this.btnMenuGame = new Guna.UI.WinForms.GunaButton();
             this.btnDashboard = new Guna.UI.WinForms.GunaButton();
             this.panelMenu = new Guna.UI.WinForms.GunaPanel();
-            this.renzonDataSet1 = new Renzone.RenzonDataSet1();
             this.renzonDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vwgameBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vw_gameTableAdapter = new Renzone.RenzonDataSet1TableAdapters.vw_gameTableAdapter();
+            this.renzonDataSet11 = new Renzone.RenzonDataSet1();
+            this.vwgameBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idgameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namagameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deskripsigameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tanggalrilisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namakategoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kategoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Update = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -81,9 +83,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGame)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwgameBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwgameBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwgameBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -139,7 +143,7 @@
             this.tbTanggalG.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.tbTanggalG.Location = new System.Drawing.Point(682, 327);
             this.tbTanggalG.Name = "tbTanggalG";
-            this.tbTanggalG.Size = new System.Drawing.Size(326, 30);
+            this.tbTanggalG.Size = new System.Drawing.Size(326, 44);
             this.tbTanggalG.TabIndex = 69;
             this.tbTanggalG.Value = new System.DateTime(2023, 6, 21, 0, 0, 0, 0);
             // 
@@ -168,7 +172,7 @@
             this.tbCategoryG.Name = "tbCategoryG";
             this.tbCategoryG.PasswordChar = '\0';
             this.tbCategoryG.SelectedText = "";
-            this.tbCategoryG.Size = new System.Drawing.Size(249, 33);
+            this.tbCategoryG.Size = new System.Drawing.Size(249, 47);
             this.tbCategoryG.TabIndex = 67;
             // 
             // tbDeskG
@@ -184,7 +188,7 @@
             this.tbDeskG.Name = "tbDeskG";
             this.tbDeskG.PasswordChar = '\0';
             this.tbDeskG.SelectedText = "";
-            this.tbDeskG.Size = new System.Drawing.Size(326, 33);
+            this.tbDeskG.Size = new System.Drawing.Size(326, 47);
             this.tbDeskG.TabIndex = 66;
             // 
             // tbNamaG
@@ -200,7 +204,7 @@
             this.tbNamaG.Name = "tbNamaG";
             this.tbNamaG.PasswordChar = '\0';
             this.tbNamaG.SelectedText = "";
-            this.tbNamaG.Size = new System.Drawing.Size(326, 33);
+            this.tbNamaG.Size = new System.Drawing.Size(326, 47);
             this.tbNamaG.TabIndex = 65;
             // 
             // tbIDG
@@ -216,7 +220,7 @@
             this.tbIDG.Name = "tbIDG";
             this.tbIDG.PasswordChar = '\0';
             this.tbIDG.SelectedText = "";
-            this.tbIDG.Size = new System.Drawing.Size(326, 33);
+            this.tbIDG.Size = new System.Drawing.Size(326, 47);
             this.tbIDG.TabIndex = 64;
             // 
             // btnSearch
@@ -257,7 +261,7 @@
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.PasswordChar = '\0';
             this.tbSearch.SelectedText = "";
-            this.tbSearch.Size = new System.Drawing.Size(243, 37);
+            this.tbSearch.Size = new System.Drawing.Size(243, 52);
             this.tbSearch.TabIndex = 62;
             // 
             // btnCancel
@@ -333,10 +337,10 @@
             this.namagameDataGridViewTextBoxColumn,
             this.deskripsigameDataGridViewTextBoxColumn,
             this.tanggalrilisDataGridViewTextBoxColumn,
-            this.namakategoriDataGridViewTextBoxColumn,
+            this.kategoriDataGridViewTextBoxColumn,
             this.Update,
             this.Delete});
-            this.dgvGame.DataSource = this.vwgameBindingSource;
+            this.dgvGame.DataSource = this.vwgameBindingSource1;
             this.dgvGame.DoubleBuffered = true;
             this.dgvGame.EnableHeadersVisualStyles = false;
             this.dgvGame.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
@@ -349,6 +353,16 @@
             this.dgvGame.RowTemplate.Height = 24;
             this.dgvGame.Size = new System.Drawing.Size(878, 170);
             this.dgvGame.TabIndex = 59;
+            // 
+            // vwgameBindingSource
+            // 
+            this.vwgameBindingSource.DataMember = "vw_game";
+            this.vwgameBindingSource.DataSource = this.renzonDataSet1;
+            // 
+            // renzonDataSet1
+            // 
+            this.renzonDataSet1.DataSetName = "RenzonDataSet1";
+            this.renzonDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnAddCat
             // 
@@ -647,48 +661,48 @@
             this.panelMenu.Size = new System.Drawing.Size(15, 59);
             this.panelMenu.TabIndex = 75;
             // 
-            // renzonDataSet1
-            // 
-            this.renzonDataSet1.DataSetName = "RenzonDataSet1";
-            this.renzonDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // renzonDataSet1BindingSource
             // 
             this.renzonDataSet1BindingSource.DataSource = this.renzonDataSet1;
             this.renzonDataSet1BindingSource.Position = 0;
             // 
-            // vwgameBindingSource
-            // 
-            this.vwgameBindingSource.DataMember = "vw_game";
-            this.vwgameBindingSource.DataSource = this.renzonDataSet1;
-            // 
             // vw_gameTableAdapter
             // 
             this.vw_gameTableAdapter.ClearBeforeFill = true;
             // 
+            // renzonDataSet11
+            // 
+            this.renzonDataSet11.DataSetName = "RenzonDataSet1";
+            this.renzonDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vwgameBindingSource1
+            // 
+            this.vwgameBindingSource1.DataMember = "vw_game";
+            this.vwgameBindingSource1.DataSource = this.renzonDataSet11;
+            // 
             // idgameDataGridViewTextBoxColumn
             // 
             this.idgameDataGridViewTextBoxColumn.DataPropertyName = "id_game";
-            this.idgameDataGridViewTextBoxColumn.HeaderText = "ID Game";
-            this.idgameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idgameDataGridViewTextBoxColumn.HeaderText = "id_game";
+            this.idgameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.idgameDataGridViewTextBoxColumn.Name = "idgameDataGridViewTextBoxColumn";
             this.idgameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idgameDataGridViewTextBoxColumn.Width = 125;
+            this.idgameDataGridViewTextBoxColumn.Width = 200;
             // 
             // namagameDataGridViewTextBoxColumn
             // 
             this.namagameDataGridViewTextBoxColumn.DataPropertyName = "nama_game";
-            this.namagameDataGridViewTextBoxColumn.HeaderText = "Nama Game";
-            this.namagameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.namagameDataGridViewTextBoxColumn.HeaderText = "nama_game";
+            this.namagameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.namagameDataGridViewTextBoxColumn.Name = "namagameDataGridViewTextBoxColumn";
             this.namagameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.namagameDataGridViewTextBoxColumn.Width = 150;
+            this.namagameDataGridViewTextBoxColumn.Width = 200;
             // 
             // deskripsigameDataGridViewTextBoxColumn
             // 
             this.deskripsigameDataGridViewTextBoxColumn.DataPropertyName = "deskripsi_game";
-            this.deskripsigameDataGridViewTextBoxColumn.HeaderText = "Deskripsi";
-            this.deskripsigameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.deskripsigameDataGridViewTextBoxColumn.HeaderText = "deskripsi_game";
+            this.deskripsigameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.deskripsigameDataGridViewTextBoxColumn.Name = "deskripsigameDataGridViewTextBoxColumn";
             this.deskripsigameDataGridViewTextBoxColumn.ReadOnly = true;
             this.deskripsigameDataGridViewTextBoxColumn.Width = 200;
@@ -696,20 +710,20 @@
             // tanggalrilisDataGridViewTextBoxColumn
             // 
             this.tanggalrilisDataGridViewTextBoxColumn.DataPropertyName = "tanggal_rilis";
-            this.tanggalrilisDataGridViewTextBoxColumn.HeaderText = "Tanggal Rilis";
-            this.tanggalrilisDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tanggalrilisDataGridViewTextBoxColumn.HeaderText = "tanggal_rilis";
+            this.tanggalrilisDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.tanggalrilisDataGridViewTextBoxColumn.Name = "tanggalrilisDataGridViewTextBoxColumn";
             this.tanggalrilisDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tanggalrilisDataGridViewTextBoxColumn.Width = 125;
+            this.tanggalrilisDataGridViewTextBoxColumn.Width = 200;
             // 
-            // namakategoriDataGridViewTextBoxColumn
+            // kategoriDataGridViewTextBoxColumn
             // 
-            this.namakategoriDataGridViewTextBoxColumn.DataPropertyName = "nama_kategori";
-            this.namakategoriDataGridViewTextBoxColumn.HeaderText = "Nama Kategori";
-            this.namakategoriDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.namakategoriDataGridViewTextBoxColumn.Name = "namakategoriDataGridViewTextBoxColumn";
-            this.namakategoriDataGridViewTextBoxColumn.ReadOnly = true;
-            this.namakategoriDataGridViewTextBoxColumn.Width = 150;
+            this.kategoriDataGridViewTextBoxColumn.DataPropertyName = "kategori";
+            this.kategoriDataGridViewTextBoxColumn.HeaderText = "kategori";
+            this.kategoriDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.kategoriDataGridViewTextBoxColumn.Name = "kategoriDataGridViewTextBoxColumn";
+            this.kategoriDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kategoriDataGridViewTextBoxColumn.Width = 200;
             // 
             // Update
             // 
@@ -777,9 +791,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGame)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwgameBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwgameBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwgameBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -822,11 +838,13 @@
         private RenzonDataSet1 renzonDataSet1;
         private System.Windows.Forms.BindingSource vwgameBindingSource;
         private RenzonDataSet1TableAdapters.vw_gameTableAdapter vw_gameTableAdapter;
+        private RenzonDataSet1 renzonDataSet11;
+        private System.Windows.Forms.BindingSource vwgameBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idgameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn namagameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deskripsigameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tanggalrilisDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namakategoriDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kategoriDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewImageColumn Update;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
     }

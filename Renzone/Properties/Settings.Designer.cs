@@ -32,5 +32,16 @@ namespace Renzone.Properties {
                 return ((string)(this["RenzonConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=FARHAN_ADIYASA\\MSSQLSERVER02;Initial Catalog=Renzone;Integrated Secur" +
+            "ity=True")]
+        public string RenzoneConnectionString {
+            get {
+                return ((string)(this["RenzoneConnectionString"]));
+            }
+        }
     }
 }
