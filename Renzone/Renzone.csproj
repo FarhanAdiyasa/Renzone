@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\RenZone_Transaksi\RenZone_Transaksi\bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\..\..\Semester 2\prjd\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -43,7 +43,7 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\RenZone_Transaksi\RenZone_Transaksi\bin\Debug\Guna.UI.dll</HintPath>
+      <HintPath>C:\Users\Farhan Adiyasa\Downloads\Guna.UI\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
@@ -117,20 +117,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RenzonDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RenzonDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="RenzonDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RenzonDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="RenzonDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RenzonDataSet4.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddCategory.resx">
       <DependentUpon>AddCategory.cs</DependentUpon>
@@ -179,17 +169,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="RenzonDataSet.xsc">
-      <DependentUpon>RenzonDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="RenzonDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RenzonDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RenzonDataSet.xss">
-      <DependentUpon>RenzonDataSet.xsd</DependentUpon>
-    </None>
     <None Include="RenzonDataSet1.xsc">
       <DependentUpon>RenzonDataSet1.xsd</DependentUpon>
     </None>
@@ -200,17 +179,6 @@
     </None>
     <None Include="RenzonDataSet1.xss">
       <DependentUpon>RenzonDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="RenzonDataSet4.xsc">
-      <DependentUpon>RenzonDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="RenzonDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RenzonDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RenzonDataSet4.xss">
-      <DependentUpon>RenzonDataSet4.xsd</DependentUpon>
     </None>
     <None Include="Resources\icons8-save.gif" />
   </ItemGroup>
