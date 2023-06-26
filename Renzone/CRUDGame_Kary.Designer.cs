@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDGame_Kary));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -48,6 +48,15 @@
             this.btnCancel = new Guna.UI.WinForms.GunaButton();
             this.btSave = new Guna.UI.WinForms.GunaButton();
             this.dgvGame = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.idgameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namagameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deskripsigameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tanggalrilisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kategoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Update = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.vwgameBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.renzonDataSet11 = new Renzone.RenzonDataSet1();
             this.vwgameBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.renzonDataSet1 = new Renzone.RenzonDataSet1();
             this.btnAddCat = new Guna.UI.WinForms.GunaImageButton();
@@ -68,26 +77,17 @@
             this.panelMenu = new Guna.UI.WinForms.GunaPanel();
             this.renzonDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vw_gameTableAdapter = new Renzone.RenzonDataSet1TableAdapters.vw_gameTableAdapter();
-            this.renzonDataSet11 = new Renzone.RenzonDataSet1();
-            this.vwgameBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.idgameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namagameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deskripsigameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tanggalrilisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kategoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Update = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGame)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwgameBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwgameBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwgameBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox5
@@ -317,20 +317,20 @@
             // dgvGame
             // 
             this.dgvGame.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvGame.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvGame.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvGame.AutoGenerateColumns = false;
             this.dgvGame.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgvGame.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGame.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGame.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGame.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvGame.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGame.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idgameDataGridViewTextBoxColumn,
@@ -354,6 +354,79 @@
             this.dgvGame.Size = new System.Drawing.Size(878, 170);
             this.dgvGame.TabIndex = 59;
             // 
+            // idgameDataGridViewTextBoxColumn
+            // 
+            this.idgameDataGridViewTextBoxColumn.DataPropertyName = "id_game";
+            this.idgameDataGridViewTextBoxColumn.HeaderText = "id_game";
+            this.idgameDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.idgameDataGridViewTextBoxColumn.Name = "idgameDataGridViewTextBoxColumn";
+            this.idgameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idgameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // namagameDataGridViewTextBoxColumn
+            // 
+            this.namagameDataGridViewTextBoxColumn.DataPropertyName = "nama_game";
+            this.namagameDataGridViewTextBoxColumn.HeaderText = "nama_game";
+            this.namagameDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.namagameDataGridViewTextBoxColumn.Name = "namagameDataGridViewTextBoxColumn";
+            this.namagameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.namagameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // deskripsigameDataGridViewTextBoxColumn
+            // 
+            this.deskripsigameDataGridViewTextBoxColumn.DataPropertyName = "deskripsi_game";
+            this.deskripsigameDataGridViewTextBoxColumn.HeaderText = "deskripsi_game";
+            this.deskripsigameDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.deskripsigameDataGridViewTextBoxColumn.Name = "deskripsigameDataGridViewTextBoxColumn";
+            this.deskripsigameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deskripsigameDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // tanggalrilisDataGridViewTextBoxColumn
+            // 
+            this.tanggalrilisDataGridViewTextBoxColumn.DataPropertyName = "tanggal_rilis";
+            this.tanggalrilisDataGridViewTextBoxColumn.HeaderText = "tanggal_rilis";
+            this.tanggalrilisDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.tanggalrilisDataGridViewTextBoxColumn.Name = "tanggalrilisDataGridViewTextBoxColumn";
+            this.tanggalrilisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tanggalrilisDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // kategoriDataGridViewTextBoxColumn
+            // 
+            this.kategoriDataGridViewTextBoxColumn.DataPropertyName = "kategori";
+            this.kategoriDataGridViewTextBoxColumn.HeaderText = "kategori";
+            this.kategoriDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.kategoriDataGridViewTextBoxColumn.Name = "kategoriDataGridViewTextBoxColumn";
+            this.kategoriDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kategoriDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // Update
+            // 
+            this.Update.HeaderText = "Update";
+            this.Update.MinimumWidth = 6;
+            this.Update.Name = "Update";
+            this.Update.ReadOnly = true;
+            this.Update.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Update.Width = 70;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.Width = 70;
+            // 
+            // vwgameBindingSource1
+            // 
+            this.vwgameBindingSource1.DataMember = "vw_game";
+            this.vwgameBindingSource1.DataSource = this.renzonDataSet11;
+            // 
+            // renzonDataSet11
+            // 
+            this.renzonDataSet11.DataSetName = "RenzonDataSet1";
+            this.renzonDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // vwgameBindingSource
             // 
             this.vwgameBindingSource.DataMember = "vw_game";
@@ -366,6 +439,8 @@
             // 
             // btnAddCat
             // 
+            this.btnAddCat.BackColor = System.Drawing.Color.White;
+            this.btnAddCat.BackgroundImage = global::Renzone.Properties.Resources.icons8_plus_30;
             this.btnAddCat.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAddCat.Image = null;
             this.btnAddCat.ImageSize = new System.Drawing.Size(35, 35);
@@ -375,6 +450,7 @@
             this.btnAddCat.OnHoverImageOffset = new System.Drawing.Point(0, 0);
             this.btnAddCat.Size = new System.Drawing.Size(54, 33);
             this.btnAddCat.TabIndex = 58;
+            this.btnAddCat.Click += new System.EventHandler(this.btnAddCat_Click_1);
             // 
             // gunaLabel5
             // 
@@ -670,79 +746,6 @@
             // 
             this.vw_gameTableAdapter.ClearBeforeFill = true;
             // 
-            // renzonDataSet11
-            // 
-            this.renzonDataSet11.DataSetName = "RenzonDataSet1";
-            this.renzonDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vwgameBindingSource1
-            // 
-            this.vwgameBindingSource1.DataMember = "vw_game";
-            this.vwgameBindingSource1.DataSource = this.renzonDataSet11;
-            // 
-            // idgameDataGridViewTextBoxColumn
-            // 
-            this.idgameDataGridViewTextBoxColumn.DataPropertyName = "id_game";
-            this.idgameDataGridViewTextBoxColumn.HeaderText = "id_game";
-            this.idgameDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.idgameDataGridViewTextBoxColumn.Name = "idgameDataGridViewTextBoxColumn";
-            this.idgameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idgameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // namagameDataGridViewTextBoxColumn
-            // 
-            this.namagameDataGridViewTextBoxColumn.DataPropertyName = "nama_game";
-            this.namagameDataGridViewTextBoxColumn.HeaderText = "nama_game";
-            this.namagameDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.namagameDataGridViewTextBoxColumn.Name = "namagameDataGridViewTextBoxColumn";
-            this.namagameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.namagameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // deskripsigameDataGridViewTextBoxColumn
-            // 
-            this.deskripsigameDataGridViewTextBoxColumn.DataPropertyName = "deskripsi_game";
-            this.deskripsigameDataGridViewTextBoxColumn.HeaderText = "deskripsi_game";
-            this.deskripsigameDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.deskripsigameDataGridViewTextBoxColumn.Name = "deskripsigameDataGridViewTextBoxColumn";
-            this.deskripsigameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.deskripsigameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // tanggalrilisDataGridViewTextBoxColumn
-            // 
-            this.tanggalrilisDataGridViewTextBoxColumn.DataPropertyName = "tanggal_rilis";
-            this.tanggalrilisDataGridViewTextBoxColumn.HeaderText = "tanggal_rilis";
-            this.tanggalrilisDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.tanggalrilisDataGridViewTextBoxColumn.Name = "tanggalrilisDataGridViewTextBoxColumn";
-            this.tanggalrilisDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tanggalrilisDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // kategoriDataGridViewTextBoxColumn
-            // 
-            this.kategoriDataGridViewTextBoxColumn.DataPropertyName = "kategori";
-            this.kategoriDataGridViewTextBoxColumn.HeaderText = "kategori";
-            this.kategoriDataGridViewTextBoxColumn.MinimumWidth = 10;
-            this.kategoriDataGridViewTextBoxColumn.Name = "kategoriDataGridViewTextBoxColumn";
-            this.kategoriDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kategoriDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // Update
-            // 
-            this.Update.HeaderText = "Update";
-            this.Update.MinimumWidth = 6;
-            this.Update.Name = "Update";
-            this.Update.ReadOnly = true;
-            this.Update.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Update.Width = 70;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Delete.Width = 70;
-            // 
             // CRUDGame_Kary
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -791,11 +794,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGame)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vwgameBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwgameBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vwgameBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

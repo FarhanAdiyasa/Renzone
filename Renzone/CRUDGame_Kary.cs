@@ -436,6 +436,11 @@ namespace Renzone
 
         }
 
+        private void btnAddCat_Click_1(object sender, EventArgs e)
+        {
+            OpenAddCategoryForm();
+        }
+
         public void LoadData()
         {
             // Update the DataGridView with the latest data
