@@ -99,6 +99,12 @@
     <Compile Include="CRUDMember.Designer.cs">
       <DependentUpon>CRUDMember.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUDMember.resx">
       <DependentUpon>CRUDMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -219,6 +228,7 @@
     <Content Include="Resources\headphone music_.png" />
     <Content Include="Resources\home simple door_.png" />
     <Content Include="Resources\hometable.png" />
+    <None Include="Resources\Icon.png" />
     <Content Include="Resources\icons8-add-bookmark-48.png" />
     <Content Include="Resources\icons8-delete-30.png" />
     <Content Include="Resources\icons8-delete-90.png" />
@@ -228,6 +238,7 @@
     <Content Include="Resources\icons8-save-as-301.png" />
     <Content Include="Resources\icons8-save-as-90.png" />
     <Content Include="Resources\icons8-x-96.png" />
+    <None Include="Resources\id.png" />
     <Content Include="Resources\name.png" />
     <Content Include="Resources\Pembayaran %281%29.png" />
     <Content Include="Resources\Pembayaran %283%29.png" />
