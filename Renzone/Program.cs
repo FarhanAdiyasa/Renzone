@@ -16,7 +16,7 @@ namespace Renzone
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CRUDMember());
+            Application.Run(new Form1());
         }
     }
 }

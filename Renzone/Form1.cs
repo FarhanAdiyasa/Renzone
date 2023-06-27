@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TheArtOfDevHtmlRenderer.Adapters;
 using System.Data.SqlClient;
 
 namespace KategoriGame
@@ -18,12 +19,11 @@ namespace KategoriGame
         private SqlCommand command;
         private SqlDataReader reader;
         private DataTable dt;
-        private const string connectionString = "integrated security=false;data source=.;initial catalog=Renzone;user id = sa ; password = polman";
+        private const string connectionString = "integrated security=false;data source=FARHAN_ADIYASA\\MSSQLSERVER02;initial catalog=Renzone;user id = sa ; password = polman";
         public Form1()
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             txtID.Text = GenerateID();
@@ -63,7 +63,6 @@ namespace KategoriGame
 
             command.Parameters.AddWithValue("id_kategori", txtID.Text);
             command.Parameters.AddWithValue("nama_kategori", txtNama.Text);
-           
 
             try
             {
@@ -71,7 +70,6 @@ namespace KategoriGame
                 command.ExecuteNonQuery();
                 MessageBox.Show("Data kategori game berhasil disimpan", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
-                
                 clear();
                 txtID.Text = GenerateID();
                 // Memperbarui DataGridView
@@ -90,7 +88,6 @@ namespace KategoriGame
                     updateCommand.ExecuteNonQuery();
                     MessageBox.Show("Data Kategori game berhasil diperbarui", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadData();
-                    
                     clear();
                     txtID.Text = GenerateID();
 
@@ -175,7 +172,6 @@ namespace KategoriGame
                 }
             }
         }
-
         private void gunaButton3_Click(object sender, EventArgs e)
         {
             try
@@ -237,7 +233,6 @@ namespace KategoriGame
         {
             clear();
         }
-
         private string GenerateID()
         {
             string newID = "";
@@ -284,7 +279,31 @@ namespace KategoriGame
         {
             Close();
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            txtID.Text = GenerateID();
+            // TODO: This line of code loads data into the 'renzonDataSet1.ms_kategorigame' table. You can move, or remove it, as needed.
+            this.ms_kategorigameTableAdapter.Fill(this.renzonDataSet1.ms_kategorigame);
+            if (bunifuCustomDataGrid1.Rows.Count > 0)
+            {
+                bunifuCustomDataGrid1.Rows[0].Selected = true;
+            }
+            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn();
+
+            /*deleteButtonColumn.Name = "DeleteColumn";
+            deleteButtonColumn.HeaderText = "";
+            deleteButtonColumn.Text = "Delete";
+            deleteButtonColumn.UseColumnTextForButtonValue = true;
+            bunifuCustomDataGrid1.Columns.Add(deleteButtonColumn);*/
+
+            LoadData();
+            dt = new DataTable();
+            adapter = new SqlDataAdapter("SElECT * FROM ms_kategorigame", connectionString);
+            adapter.Fill(dt);
+            bunifuCustomDataGrid1.DataSource = dt;
+
+
+        }
     }
-
-
+    }
 }
