@@ -430,6 +430,7 @@ namespace Renzone
 
         private void CRUDGame_Kary_Load_1(object sender, EventArgs e)
         {
+           
             // TODO: This line of code loads data into the 'renzonDataSet11.vw_game' table. You can move, or remove it, as needed.
             this.vw_gameTableAdapter.Fill(this.renzonDataSet11.vw_game);
             tbIDG.Text = GenerateID();
@@ -439,6 +440,11 @@ namespace Renzone
         private void btnAddCat_Click_1(object sender, EventArgs e)
         {
             OpenAddCategoryForm();
+        }
+
+        private void dgvGame_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         public void LoadData()

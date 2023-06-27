@@ -28,20 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRUDMember));
-            this.tbTanggalG = new System.Windows.Forms.DateTimePicker();
             this.lbValidasi = new Guna.UI.WinForms.GunaLabel();
-            this.tbCategoryG = new Guna.UI.WinForms.GunaTextBox();
-            this.tbDeskG = new Guna.UI.WinForms.GunaTextBox();
-            this.tbNamaG = new Guna.UI.WinForms.GunaTextBox();
-            this.tbIDG = new Guna.UI.WinForms.GunaTextBox();
+            this.tbAlamatM = new Guna.UI.WinForms.GunaTextBox();
+            this.tbTelpM = new Guna.UI.WinForms.GunaTextBox();
+            this.tbNamaM = new Guna.UI.WinForms.GunaTextBox();
+            this.tbIDM = new Guna.UI.WinForms.GunaTextBox();
             this.btnSearch = new Guna.UI.WinForms.GunaButton();
             this.tbSearch = new Guna.UI.WinForms.GunaLineTextBox();
-            this.dgvGame = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dgvMember = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.id_member = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nama_member = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alamat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.no_telp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tgl_daftar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status_anggota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Update = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.msmemberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.renzonDataSet1 = new Renzone.RenzonDataSet1();
             this.btnAddCat = new Guna.UI.WinForms.GunaImageButton();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
@@ -64,25 +72,17 @@
             this.btnMenuCategory = new Guna.UI.WinForms.GunaButton();
             this.btnMenuGame = new Guna.UI.WinForms.GunaButton();
             this.btnDashboard = new Guna.UI.WinForms.GunaButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGame)).BeginInit();
+            this.ms_memberTableAdapter = new Renzone.RenzonDataSet1TableAdapters.ms_memberTableAdapter();
+            this.tbTanggalM = new Guna.UI.WinForms.GunaTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msmemberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tbTanggalG
-            // 
-            this.tbTanggalG.CalendarFont = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTanggalG.CustomFormat = "dd-MM-yyyy";
-            this.tbTanggalG.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTanggalG.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.tbTanggalG.Location = new System.Drawing.Point(721, 309);
-            this.tbTanggalG.Name = "tbTanggalG";
-            this.tbTanggalG.Size = new System.Drawing.Size(326, 44);
-            this.tbTanggalG.TabIndex = 100;
-            this.tbTanggalG.Value = new System.DateTime(2023, 6, 21, 0, 0, 0, 0);
             // 
             // lbValidasi
             // 
@@ -96,69 +96,69 @@
             this.lbValidasi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbValidasi.Visible = false;
             // 
-            // tbCategoryG
+            // tbAlamatM
             // 
-            this.tbCategoryG.BaseColor = System.Drawing.Color.White;
-            this.tbCategoryG.BorderColor = System.Drawing.Color.Silver;
-            this.tbCategoryG.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCategoryG.FocusedBaseColor = System.Drawing.Color.White;
-            this.tbCategoryG.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbCategoryG.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbCategoryG.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbCategoryG.Location = new System.Drawing.Point(721, 363);
-            this.tbCategoryG.Name = "tbCategoryG";
-            this.tbCategoryG.PasswordChar = '\0';
-            this.tbCategoryG.SelectedText = "";
-            this.tbCategoryG.Size = new System.Drawing.Size(249, 47);
-            this.tbCategoryG.TabIndex = 98;
+            this.tbAlamatM.BaseColor = System.Drawing.Color.White;
+            this.tbAlamatM.BorderColor = System.Drawing.Color.Silver;
+            this.tbAlamatM.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbAlamatM.FocusedBaseColor = System.Drawing.Color.White;
+            this.tbAlamatM.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tbAlamatM.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tbAlamatM.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAlamatM.Location = new System.Drawing.Point(721, 251);
+            this.tbAlamatM.Name = "tbAlamatM";
+            this.tbAlamatM.PasswordChar = '\0';
+            this.tbAlamatM.SelectedText = "";
+            this.tbAlamatM.Size = new System.Drawing.Size(326, 47);
+            this.tbAlamatM.TabIndex = 98;
             // 
-            // tbDeskG
+            // tbTelpM
             // 
-            this.tbDeskG.BaseColor = System.Drawing.Color.White;
-            this.tbDeskG.BorderColor = System.Drawing.Color.Silver;
-            this.tbDeskG.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbDeskG.FocusedBaseColor = System.Drawing.Color.White;
-            this.tbDeskG.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbDeskG.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbDeskG.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDeskG.Location = new System.Drawing.Point(721, 247);
-            this.tbDeskG.Name = "tbDeskG";
-            this.tbDeskG.PasswordChar = '\0';
-            this.tbDeskG.SelectedText = "";
-            this.tbDeskG.Size = new System.Drawing.Size(326, 47);
-            this.tbDeskG.TabIndex = 97;
+            this.tbTelpM.BaseColor = System.Drawing.Color.White;
+            this.tbTelpM.BorderColor = System.Drawing.Color.Silver;
+            this.tbTelpM.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbTelpM.FocusedBaseColor = System.Drawing.Color.White;
+            this.tbTelpM.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tbTelpM.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tbTelpM.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTelpM.Location = new System.Drawing.Point(721, 364);
+            this.tbTelpM.Name = "tbTelpM";
+            this.tbTelpM.PasswordChar = '\0';
+            this.tbTelpM.SelectedText = "";
+            this.tbTelpM.Size = new System.Drawing.Size(326, 47);
+            this.tbTelpM.TabIndex = 97;
             // 
-            // tbNamaG
+            // tbNamaM
             // 
-            this.tbNamaG.BaseColor = System.Drawing.Color.White;
-            this.tbNamaG.BorderColor = System.Drawing.Color.Silver;
-            this.tbNamaG.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbNamaG.FocusedBaseColor = System.Drawing.Color.White;
-            this.tbNamaG.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbNamaG.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbNamaG.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNamaG.Location = new System.Drawing.Point(721, 190);
-            this.tbNamaG.Name = "tbNamaG";
-            this.tbNamaG.PasswordChar = '\0';
-            this.tbNamaG.SelectedText = "";
-            this.tbNamaG.Size = new System.Drawing.Size(326, 47);
-            this.tbNamaG.TabIndex = 96;
+            this.tbNamaM.BaseColor = System.Drawing.Color.White;
+            this.tbNamaM.BorderColor = System.Drawing.Color.Silver;
+            this.tbNamaM.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNamaM.FocusedBaseColor = System.Drawing.Color.White;
+            this.tbNamaM.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tbNamaM.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tbNamaM.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNamaM.Location = new System.Drawing.Point(721, 190);
+            this.tbNamaM.Name = "tbNamaM";
+            this.tbNamaM.PasswordChar = '\0';
+            this.tbNamaM.SelectedText = "";
+            this.tbNamaM.Size = new System.Drawing.Size(326, 47);
+            this.tbNamaM.TabIndex = 96;
             // 
-            // tbIDG
+            // tbIDM
             // 
-            this.tbIDG.BaseColor = System.Drawing.Color.White;
-            this.tbIDG.BorderColor = System.Drawing.Color.Silver;
-            this.tbIDG.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbIDG.FocusedBaseColor = System.Drawing.Color.White;
-            this.tbIDG.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tbIDG.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.tbIDG.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbIDG.Location = new System.Drawing.Point(721, 135);
-            this.tbIDG.Name = "tbIDG";
-            this.tbIDG.PasswordChar = '\0';
-            this.tbIDG.SelectedText = "";
-            this.tbIDG.Size = new System.Drawing.Size(326, 47);
-            this.tbIDG.TabIndex = 95;
+            this.tbIDM.BaseColor = System.Drawing.Color.White;
+            this.tbIDM.BorderColor = System.Drawing.Color.Silver;
+            this.tbIDM.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbIDM.FocusedBaseColor = System.Drawing.Color.White;
+            this.tbIDM.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tbIDM.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tbIDM.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbIDM.Location = new System.Drawing.Point(721, 135);
+            this.tbIDM.Name = "tbIDM";
+            this.tbIDM.PasswordChar = '\0';
+            this.tbIDM.SelectedText = "";
+            this.tbIDM.Size = new System.Drawing.Size(326, 47);
+            this.tbIDM.TabIndex = 95;
             // 
             // btnSearch
             // 
@@ -194,63 +194,141 @@
             this.tbSearch.Font = new System.Drawing.Font("SimSun", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbSearch.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
             this.tbSearch.LineSize = 2;
-            this.tbSearch.Location = new System.Drawing.Point(1037, 633);
+            this.tbSearch.Location = new System.Drawing.Point(964, 633);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.PasswordChar = '\0';
             this.tbSearch.SelectedText = "";
-            this.tbSearch.Size = new System.Drawing.Size(243, 52);
+            this.tbSearch.Size = new System.Drawing.Size(316, 52);
             this.tbSearch.TabIndex = 93;
+            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
             // 
-            // dgvGame
+            // dgvMember
             // 
-            this.dgvGame.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvGame.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvGame.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgvGame.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvGame.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGame.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvGame.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGame.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMember.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvMember.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMember.AutoGenerateColumns = false;
+            this.dgvMember.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgvMember.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvMember.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMember.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMember.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_member,
+            this.nama_member,
+            this.alamat,
+            this.no_telp,
+            this.tgl_daftar,
+            this.status_anggota,
             this.Update,
             this.Delete});
-            this.dgvGame.DoubleBuffered = true;
-            this.dgvGame.EnableHeadersVisualStyles = false;
-            this.dgvGame.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
-            this.dgvGame.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvGame.Location = new System.Drawing.Point(460, 686);
-            this.dgvGame.Name = "dgvGame";
-            this.dgvGame.ReadOnly = true;
-            this.dgvGame.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvGame.RowHeadersWidth = 51;
-            this.dgvGame.RowTemplate.Height = 24;
-            this.dgvGame.Size = new System.Drawing.Size(878, 170);
-            this.dgvGame.TabIndex = 90;
+            this.dgvMember.DataSource = this.msmemberBindingSource;
+            this.dgvMember.DoubleBuffered = true;
+            this.dgvMember.EnableHeadersVisualStyles = false;
+            this.dgvMember.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(19)))), ((int)(((byte)(80)))));
+            this.dgvMember.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvMember.Location = new System.Drawing.Point(453, 686);
+            this.dgvMember.Name = "dgvMember";
+            this.dgvMember.ReadOnly = true;
+            this.dgvMember.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvMember.RowHeadersWidth = 51;
+            this.dgvMember.RowTemplate.Height = 24;
+            this.dgvMember.Size = new System.Drawing.Size(878, 170);
+            this.dgvMember.TabIndex = 90;
+            this.dgvMember.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMember_CellContentClick);
+            // 
+            // id_member
+            // 
+            this.id_member.DataPropertyName = "id_member";
+            this.id_member.HeaderText = "id_member";
+            this.id_member.MinimumWidth = 10;
+            this.id_member.Name = "id_member";
+            this.id_member.ReadOnly = true;
+            this.id_member.Width = 200;
+            // 
+            // nama_member
+            // 
+            this.nama_member.DataPropertyName = "nama_member";
+            this.nama_member.HeaderText = "nama_member";
+            this.nama_member.MinimumWidth = 10;
+            this.nama_member.Name = "nama_member";
+            this.nama_member.ReadOnly = true;
+            this.nama_member.Width = 200;
+            // 
+            // alamat
+            // 
+            this.alamat.DataPropertyName = "alamat";
+            this.alamat.HeaderText = "alamat";
+            this.alamat.MinimumWidth = 10;
+            this.alamat.Name = "alamat";
+            this.alamat.ReadOnly = true;
+            this.alamat.Width = 200;
+            // 
+            // no_telp
+            // 
+            this.no_telp.DataPropertyName = "no_telp";
+            this.no_telp.HeaderText = "no_telp";
+            this.no_telp.MinimumWidth = 10;
+            this.no_telp.Name = "no_telp";
+            this.no_telp.ReadOnly = true;
+            this.no_telp.Width = 200;
+            // 
+            // tgl_daftar
+            // 
+            this.tgl_daftar.DataPropertyName = "tgl_daftar";
+            this.tgl_daftar.HeaderText = "tgl_daftar";
+            this.tgl_daftar.MinimumWidth = 10;
+            this.tgl_daftar.Name = "tgl_daftar";
+            this.tgl_daftar.ReadOnly = true;
+            this.tgl_daftar.Width = 200;
+            // 
+            // status_anggota
+            // 
+            this.status_anggota.DataPropertyName = "status_anggota";
+            this.status_anggota.HeaderText = "status_anggota";
+            this.status_anggota.MinimumWidth = 10;
+            this.status_anggota.Name = "status_anggota";
+            this.status_anggota.ReadOnly = true;
+            this.status_anggota.Width = 200;
             // 
             // Update
             // 
             this.Update.HeaderText = "Update";
+            this.Update.Image = global::Renzone.Properties.Resources.pencil__2_;
             this.Update.MinimumWidth = 6;
             this.Update.Name = "Update";
             this.Update.ReadOnly = true;
             this.Update.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Update.ToolTipText = "Edit Data";
             this.Update.Width = 70;
             // 
             // Delete
             // 
             this.Delete.HeaderText = "Delete";
+            this.Delete.Image = global::Renzone.Properties.Resources.icons8_delete_90;
             this.Delete.MinimumWidth = 6;
             this.Delete.Name = "Delete";
             this.Delete.ReadOnly = true;
             this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.ToolTipText = "Hapus Data";
             this.Delete.Width = 70;
+            // 
+            // msmemberBindingSource
+            // 
+            this.msmemberBindingSource.DataMember = "ms_member";
+            this.msmemberBindingSource.DataSource = this.renzonDataSet1;
+            // 
+            // renzonDataSet1
+            // 
+            this.renzonDataSet1.DataSetName = "RenzonDataSet1";
+            this.renzonDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnAddCat
             // 
@@ -267,11 +345,11 @@
             // gunaLabel5
             // 
             this.gunaLabel5.Font = new System.Drawing.Font("SimSun", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(518, 360);
+            this.gunaLabel5.Location = new System.Drawing.Point(518, 253);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(196, 45);
+            this.gunaLabel5.Size = new System.Drawing.Size(197, 36);
             this.gunaLabel5.TabIndex = 88;
-            this.gunaLabel5.Text = "Add Categories";
+            this.gunaLabel5.Text = "Alamat";
             this.gunaLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // gunaLabel4
@@ -281,7 +359,7 @@
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(196, 45);
             this.gunaLabel4.TabIndex = 86;
-            this.gunaLabel4.Text = "Release Date";
+            this.gunaLabel4.Text = "Regis Date";
             this.gunaLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // gunaLabel3
@@ -297,11 +375,11 @@
             // gunaLabel2
             // 
             this.gunaLabel2.Font = new System.Drawing.Font("SimSun", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(519, 244);
+            this.gunaLabel2.Location = new System.Drawing.Point(519, 361);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(196, 45);
             this.gunaLabel2.TabIndex = 84;
-            this.gunaLabel2.Text = "Description";
+            this.gunaLabel2.Text = "No Telp";
             this.gunaLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // gunaLabel1
@@ -311,8 +389,9 @@
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(196, 45);
             this.gunaLabel1.TabIndex = 83;
-            this.gunaLabel1.Text = "ID Game";
+            this.gunaLabel1.Text = "ID Member";
             this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.gunaLabel1.Click += new System.EventHandler(this.gunaLabel1_Click);
             // 
             // gunaButton1
             // 
@@ -361,7 +440,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(475, 256);
+            this.pictureBox3.Location = new System.Drawing.Point(475, 373);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 25);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -370,9 +449,9 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(475, 369);
+            this.pictureBox2.Location = new System.Drawing.Point(475, 257);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.Size = new System.Drawing.Size(24, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 102;
             this.pictureBox2.TabStop = false;
@@ -410,6 +489,7 @@
             this.btnCancel.Size = new System.Drawing.Size(119, 42);
             this.btnCancel.TabIndex = 92;
             this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btSave
             // 
@@ -435,6 +515,7 @@
             this.btSave.Size = new System.Drawing.Size(119, 42);
             this.btSave.TabIndex = 91;
             this.btSave.Text = "Save";
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // btnMenuAcc
             // 
@@ -636,27 +717,47 @@
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextOffsetX = 30;
             // 
+            // ms_memberTableAdapter
+            // 
+            this.ms_memberTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbTanggalM
+            // 
+            this.tbTanggalM.BaseColor = System.Drawing.Color.White;
+            this.tbTanggalM.BorderColor = System.Drawing.Color.Silver;
+            this.tbTanggalM.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbTanggalM.FocusedBaseColor = System.Drawing.Color.White;
+            this.tbTanggalM.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.tbTanggalM.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.tbTanggalM.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTanggalM.Location = new System.Drawing.Point(721, 304);
+            this.tbTanggalM.Name = "tbTanggalM";
+            this.tbTanggalM.PasswordChar = '\0';
+            this.tbTanggalM.SelectedText = "";
+            this.tbTanggalM.Size = new System.Drawing.Size(326, 47);
+            this.tbTanggalM.TabIndex = 106;
+            // 
             // CRUDMember
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::Renzone.Properties.Resources.CRUD__1_;
-            this.ClientSize = new System.Drawing.Size(1440, 900);
+            this.ClientSize = new System.Drawing.Size(1460, 891);
+            this.Controls.Add(this.tbTanggalM);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.tbTanggalG);
             this.Controls.Add(this.lbValidasi);
-            this.Controls.Add(this.tbCategoryG);
-            this.Controls.Add(this.tbDeskG);
-            this.Controls.Add(this.tbNamaG);
-            this.Controls.Add(this.tbIDG);
+            this.Controls.Add(this.tbAlamatM);
+            this.Controls.Add(this.tbTelpM);
+            this.Controls.Add(this.tbNamaM);
+            this.Controls.Add(this.tbIDM);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.tbSearch);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btSave);
-            this.Controls.Add(this.dgvGame);
+            this.Controls.Add(this.dgvMember);
             this.Controls.Add(this.btnAddCat);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.btnMenuAcc);
@@ -677,7 +778,10 @@
             this.ShowInTaskbar = false;
             this.Text = "CRUDMember";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGame)).EndInit();
+            this.Load += new System.EventHandler(this.CRUDMember_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msmemberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.renzonDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -694,19 +798,16 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker tbTanggalG;
         private Guna.UI.WinForms.GunaLabel lbValidasi;
-        private Guna.UI.WinForms.GunaTextBox tbCategoryG;
-        private Guna.UI.WinForms.GunaTextBox tbDeskG;
-        private Guna.UI.WinForms.GunaTextBox tbNamaG;
-        private Guna.UI.WinForms.GunaTextBox tbIDG;
+        private Guna.UI.WinForms.GunaTextBox tbAlamatM;
+        private Guna.UI.WinForms.GunaTextBox tbTelpM;
+        private Guna.UI.WinForms.GunaTextBox tbNamaM;
+        private Guna.UI.WinForms.GunaTextBox tbIDM;
         private Guna.UI.WinForms.GunaButton btnSearch;
         private Guna.UI.WinForms.GunaLineTextBox tbSearch;
         private Guna.UI.WinForms.GunaButton btnCancel;
         private Guna.UI.WinForms.GunaButton btSave;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvGame;
-        private System.Windows.Forms.DataGridViewImageColumn Update;
-        private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvMember;
         private Guna.UI.WinForms.GunaImageButton btnAddCat;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaButton btnMenuAcc;
@@ -722,5 +823,17 @@
         private Guna.UI.WinForms.GunaButton btnMenuCategory;
         private Guna.UI.WinForms.GunaButton btnMenuGame;
         private Guna.UI.WinForms.GunaButton btnDashboard;
+        private RenzonDataSet1 renzonDataSet1;
+        private System.Windows.Forms.BindingSource msmemberBindingSource;
+        private RenzonDataSet1TableAdapters.ms_memberTableAdapter ms_memberTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_member;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nama_member;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alamat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn no_telp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tgl_daftar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status_anggota;
+        private System.Windows.Forms.DataGridViewImageColumn Update;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private Guna.UI.WinForms.GunaTextBox tbTanggalM;
     }
 }
