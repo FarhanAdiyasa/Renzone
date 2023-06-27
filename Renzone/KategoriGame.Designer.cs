@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\NISA_SEM2\RENZONE_Project\New folder\New folder\Renzone\KategoriGame.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Surat Undangan Reporting\New folder\Renzone\KategoriGame.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
